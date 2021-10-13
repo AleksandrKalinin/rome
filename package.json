@@ -1,9 +1,20 @@
 {
-  "name": "expressapp",
+  "name": "babel-app",
   "version": "1.0.0",
+  "main": "index.js",
   "dependencies": {
+    "@babel/runtime": "^7.15.4",
     "axios": "^0.22.0",
     "express": "^4.16.4",
     "path": "^0.12.7"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/babel index.js --out-file ./dist/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8"
   }
 }
