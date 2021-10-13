@@ -1,3 +1,7 @@
+//const regeneratorRuntime = require("regenerator-runtime");
+
+  const URL = 'https://api.publicapis.org/entries';
+
   window.onload = function() {
     getItems()
       .then(items => console.log("Items fetched"))
@@ -8,7 +12,7 @@
 
   async function getItems() {
     try {
-      let res = await fetch('http://localhost:3000/items');
+      let res = await fetch(URL);
       if (!res.ok) {
         throw new Error(res.statusText);
       }
@@ -44,10 +48,10 @@ async function getCategories(data) {
   let select2 = document.createElement('select');
   let head = document.getElementById('head');
   const uniqueItems = [...new Set(data.map(item => item.Category))];
-  for (var i = 0; i < unique.length; i++) {
+  for (var i = 0; i < uniqueItems.length; i++) {
     let option = document.createElement('option');
-    option.innerText = unique[i];
-    option.setAttribute('value', unique[i]);
+    option.innerText = uniqueItems[i];
+    option.setAttribute('value', uniqueItems[i]);
     select.appendChild(option);
   }
 

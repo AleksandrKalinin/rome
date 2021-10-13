@@ -1,20 +1,27 @@
 {
-  "name": "babel-app",
+  "name": "fffff",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "dependencies": {
-    "@babel/runtime": "^7.15.4",
-    "axios": "^0.22.0",
-    "express": "^4.16.4",
-    "path": "^0.12.7"
-  },
   "scripts": {
-    "build": "./node_modules/.bin/babel index.js --out-file ./dist/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.8",
     "@babel/plugin-transform-runtime": "^7.15.8",
-    "@babel/preset-env": "^7.15.8"
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4"
   }
 }
